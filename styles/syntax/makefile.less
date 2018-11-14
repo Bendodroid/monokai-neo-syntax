@@ -1,0 +1,21 @@
+.syntax--variable.syntax--makefile {
+    color: @red;
+}
+
+.syntax--keyword.syntax--shell {
+    &.syntax--operator.syntax--shell,
+    &.syntax--redirect.syntax--shell {
+        color: @syntax-text-color;
+    }
+}
+
+// syntax--keyword syntax--operator syntax--redirect syntax--shell
+
+.syntax--punctuation.syntax--makefile {
+    &.syntax--definition {
+        &.syntax--variable,
+        &.syntax--parameters {
+            color: @red;
+        }
+    }
+}
